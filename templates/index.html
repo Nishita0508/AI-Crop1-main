@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}AgriAI - AI Powered Agriculture Assistant{% endblock %}
+{% block content %}
+
+<div class="text-center my-5">
+    <h1 class="display-4 fw-bold text-success">🌱 AgriAI</h1>
+    <p class="lead mt-3">
+        An AI-powered platform that helps farmers make smarter decisions —
+        recommending the best crop to grow based on soil and weather conditions,
+        and detecting plant leaf diseases instantly from a photo.
+    </p>
+    <div class="mt-4">
+        <a href="{{ url_for('auth.login') }}" class="btn btn-success btn-lg me-3">Login</a>
+        <a href="{{ url_for('auth.register') }}" class="btn btn-outline-success btn-lg">Register</a>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">🌾 Crop Recommendation</h3>
+                <p class="card-text">
+                    Enter your soil's Nitrogen, Phosphorus, Potassium levels along with
+                    temperature, humidity, pH, and rainfall — our machine learning model
+                    will recommend the most suitable crop to grow.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h3 class="card-title">🍃 Disease Detection</h3>
+                <p class="card-text">
+                    Upload a photo of a plant leaf and our deep learning model will
+                    identify the disease, show the confidence score, and give you the
+                    cause and recommended treatment.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center text-muted mb-5">
+    <p>New here? <a href="{{ url_for('auth.register') }}">Create an account</a> to get started — it's free.</p>
+</div>
+
+{% endblock %}
